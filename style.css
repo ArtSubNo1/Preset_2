@@ -152,20 +152,12 @@ body {
   display: flex;
   gap: 1rem;
 }
-.display-button button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.75rem;
-  color: rgb(6, 6, 6);
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+
 .display-button svg {
   width: 1.5rem;
   height: 1.5rem;
   margin-bottom: 0.25rem;
+  color: rgb(18, 17, 17);
 }
 
 /* === Dropdown improvements === */
@@ -199,23 +191,8 @@ body {
   transform: scale(1.05);
 }
 
-.download-btn {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  font-size: 1.25rem;
-  color: rgb(7, 7, 6);
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-.download-btn:hover {
-  background-color: rgba(22, 22, 21, 0.8);
-  color: rgb(19, 18, 18);
-}
+
+
 
 /* === Share button group responsive === */
 .share-button-group {
@@ -236,7 +213,7 @@ body {
 /* General text color */
 .selectable {
   cursor: pointer;
-  outline: 5px solid #e5e8f0; /* สีฟ้า */
+  outline: 10px solid #252525; /* สีฟ้า */
   outline-offset: 4px;
   transition: outline 0.2s ease;
 }
@@ -244,44 +221,17 @@ body {
 .image-item.selectable a[download] {
   display: none;
 }
-.image-item.selectable {
-  cursor: pointer;
-}
-
 .image-item.selected {
-  outline: 6px solid #0a4f64;
-  border-radius: 0.95rem;
-  transition: outline 0.3s ease;
-}
-.image-item.selected img {
-  border-radius: 0.5rem;
-}
-
-/* ปุ่มแสดงผล */
-.button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 80px;
-  font-size: 0.75rem;
-  color: rgb(221, 216, 216);
-  cursor: pointer;
+  background-color: rgba(59, 130, 246, 0.3); /* พื้นหลังสีน้ำเงินอ่อนโปร่งแสง */
+  border-radius: 0.75rem; /* ถ้าต้องการให้ขอบโค้งเหมือนรูป */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6); /* เพิ่มเงานิดหน่อย */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   filter: brightness(0.7) saturate(1.2);
 }
 
-/* แถบเครื่องมือด้านล่าง */
-.bottom-toolbar {
-  background-color: #000000;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  z-index: 50;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  box-shadow: 0 -4px 10px rgba(31, 10, 10, 0.3);
-}
+
+
+
 
 /* ปรับขนาดปุ่มและไอคอนให้ responsive */
 @media (max-width: 640px) {
